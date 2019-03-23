@@ -16,8 +16,8 @@ function requestApi() {
       var cell2 = row.insertCell(1);
       var cell3 = row.insertCell(2);
       cell1.innerHTML = service;
-      cell2.innerHTML = nextTime;
-      cell3.innerHTML = subTime;
+      cell2.innerHTML = nextTime.substring(11,16);
+      cell3.innerHTML = subTime.substring(11,16);
     }
   })
   .catch(error => console.error(error))
