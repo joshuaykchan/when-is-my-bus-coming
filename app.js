@@ -29,3 +29,23 @@ function deleteRows() {
     table.deleteRow(i);
   }
 }
+
+function getDateTimeNow() {
+  var today = new Date();
+  var date = today.getDate() + "/" +(today.getMonth() + 1) + "/" + today.getFullYear();
+  if (today.getHours() < 10) {
+    if (today.getMinutes() < 10) {
+      var time = "0" + today.getHours() + ":0" + today.getMinutes();
+    } else {
+      var time = "0" + today.getHours() + ":" + today.getMinutes();
+    }
+  } else {
+    if (today.getMinutes() < 10) {
+      var time = today.getHours() + ":0" + today.getMinutes() + "pm";
+    } else {
+      var time = today.getHours() + ":" + today.getMinutes() + "pm";
+    }
+  }
+  var now = date + " " + time;
+  document.getElementById('dateTime').innerHTML = now;
+}

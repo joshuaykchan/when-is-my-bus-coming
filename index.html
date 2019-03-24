@@ -1,7 +1,8 @@
 <!doctype HTML>
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
@@ -12,7 +13,7 @@
       </div>
     </div>
     <div class="container">
-      <form id="getStopInfo" class="form-horizontal" onsubmit="deleteRows(); requestApi(); return false;">
+      <form id="getStopInfo" class="form-horizontal" onsubmit="deleteRows(); requestApi(); getDateTimeNow(); return false;">
         <div class="form-group">
           <div class="col-md-12">
             <label for="stopNumber">Stop number: </label>
@@ -20,6 +21,8 @@
           </div>
         </div>
       </form>
+      <div class="col-md-12">
+        <p>Refresh Time: <span id="dateTime"></span></p>
     </div>
 
     <div class="container">
