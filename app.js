@@ -41,9 +41,9 @@ function getDateTimeNow() {
     }
   } else {
     if (today.getMinutes() < 10) {
-      var time = today.getHours() + ":0" + today.getMinutes() + "pm";
+      var time = today.getHours() + ":0" + today.getMinutes();
     } else {
-      var time = today.getHours() + ":" + today.getMinutes() + "pm";
+      var time = today.getHours() + ":" + today.getMinutes();
     }
   }
   var now = date + " " + time;
